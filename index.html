@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</title>
+    <style>
+        body 
+        {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+    
+        .container 
+        {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 20px;
+        }
+    
+        .header 
+        {
+            text-align: center;
+            font-size: 17px;
+        }
+    
+        .header-text 
+        {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-40%);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header-content 
+        {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            position: relative;
+        }
+    
+        .student-info 
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .student-info img 
+        {
+            width: 100px;
+            height: 135px;
+            margin-left: 20px;
+        }
+    
+        .lab-list 
+        {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+    
+        .lab-list div 
+        {
+            padding: 10px;
+            border: 1px solid #65dabc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ffffff;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .lab-list div:hover 
+        {
+            background-color: #65dabc;
+            color: white;
+            transform: translateY(-2px);
+        }
+    
+        .lab-list .active 
+        {
+            background-color: #28a745;
+            color: white;
+        }
+    
+        .sidebar 
+        {
+            float: left;
+            width: 25%;
+            border-right: 1px solid #ffffff;
+            padding-right: 20px;
+        }
+    
+        .sidebar div 
+        {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #65dabc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #fdfdfd;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .sidebar div:hover 
+        {
+            background-color: #65dabc;
+            color: white;
+            transform: translateY(-2px);
+        }
+    
+        .sidebar div.disabled 
+        {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    
+        .main-content 
+        {
+            float: left;
+            width: 70%;
+            padding-left: 20px;
+            height: 600px;
+        }
+    
+        .clear 
+        {
+            clear: both;
+        }
+    
+        iframe 
+        {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-content">
+                <div>
+                    <div class="header-text">
+                        <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h2>
+                        <h3>З ДИСЦИПЛІНИ «ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h3>
+                        <p>Студент групи ІС-31 Шафінський Ярослав Олегович</p>
+                    </div>
+                </div>
+
+                <div class="student-info img ">
+                    <img src="photo.jpg" alt="Фото студента">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+
+
+            <div class="lab-list" id="labButtons">
+                <div onclick="showLabContent(1, this)">Лабораторна робота №1</div>
+                <div onclick="showLabContent(2, this)">Лабораторна робота №2</div>
+                <div onclick="showLabContent(3, this)">Лабораторна робота №3</div>
+                <div onclick="showLabContent(4, this)">Лабораторна робота №4</div>
+                <div onclick="showLabContent(5, this)">Лабораторна робота №5</div>
+                <div onclick="showLabContent(6, this)">Лабораторна робота №6</div>
+                <div onclick="showLabContent(7, this)">Лабораторна робота №7</div>
+                <div onclick="showLabContent(8, this)">Лабораторна робота №8</div>
+                <div onclick="showLabContent(9, this)">Лабораторна робота №9</div>
+            </div>
+
+            <div class="sidebar" id="sidebar">
+                <div onclick="showFile('description.html')">Опис предметного середовища</div>
+                <div onclick="showFile('topic.html')">Тема, Мета, Місце розташування</div>
+                <div onclick="showFile('structure.html')">СТРУКТУРА ДОКУМЕНТА</div>
+                <div onclick="showFile('html_tables.html')">HTML-код ТАБЛИЦЬ</div>
+                <div onclick="showFile('html_forms_and_lists.html')">HTML-код ФОРМИ</div>
+                <div onclick="showFile('html_images.html')">HTML-код ЗОБРАЖЕННЯ</div>
+                <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+            </div>
+
+            <div class="main-content" id="output">
+                <iframe id="labFrame" src="" frameborder="0"></iframe>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        <script>
+            let activeButton = null;
+            let currentLab = '';
+
+            function showLabContent(labNumber, buttonElement) {
+                currentLab = labNumber;
+                document.getElementById('labFrame').src = `lab${labNumber}/lab${labNumber}.html`;
+
+                if (activeButton) {
+                    activeButton.classList.remove('active');
+                }
+                buttonElement.classList.add('active');
+                activeButton = buttonElement;
+
+                const sidebarButtons = document.querySelectorAll('.sidebar div');
+                sidebarButtons.forEach(button => {
+                    button.classList.remove('disabled');
+                });
+            }
+            function showFile(fileName) {
+                if (currentLab) {
+                    const filePath = `lab${currentLab}/${fileName}`;
+                    document.getElementById('labFrame').src = filePath;
+                }
+            }
+            document.addEventListener('DOMContentLoaded', () => {
+                currentLab = '';
+                const sidebarButtons = document.querySelectorAll('.sidebar div');
+                sidebarButtons.forEach(button => {
+                    button.classList.add('disabled');
+                });
+            });
+        </script>
+
+</body>
+
+</html>
