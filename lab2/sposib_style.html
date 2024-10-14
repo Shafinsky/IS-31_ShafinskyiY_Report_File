@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            color: blue;
+        }
+
+        .class1 p {
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Способи додавання CSS стилів на сторінку</h1>
+    </header>
+    <main>
+        <h2>1. Inline-стилі (Вбудовані стилі)</h2>
+        <p>Цей метод дозволяє додавати стилі безпосередньо до HTML-елементів за допомогою атрибута style. Кожен елемент
+            стилізується окремо, що робить цей підхід зручним для локальних або одноразових змін.</p>
+        <h3>Приклад:</h3>
+        <pre><code>&lt;p style="color: red; font-size: 16px;">Цей текст червоний і має розмір 16px.&lt;/p></code></pre>
+        <p style="color: red; font-size: 16px;">Цей текст червоний і має розмір 16px.</p>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax"
+            style="color:#000020;background:#f6f8ff;"><span class="line_wrapper">&lt;<span style="color:#200080; font-weight:bold; ">p</span> <span style="color:#200080; font-weight:bold; ">style</span>="color<span style="color:#308080; ">:</span><span style="color:#308080; ">#</span>ffffff<span style="color:#ffffff; background:#dd9999; font-weight:bold; font-style:italic; ">;</span> font-size<span style="color:#406080; ">:</span>large"<span style="color:#308080; ">&gt;</span>Сторінка з описом предметної області!  &lt;<span style="color:#200080; font-weight:bold; ">a</span> <span style="color:#200080; font-weight:bold; ">style</span>="color<span style="color:#406080; ">:</span>rgb(178<span style="color:#308080; ">,</span> 6<span style="color:#308080; ">,</span> 184)"</span>
+            <span class="line_wrapper">                        href="https<span style="color:#308080; ">:</span>//shafinsky.github.<span style="color:#308080; ">.</span>io/Shafinsky-IS-31_ShafinskyiY_subject-area/">"<span style="color:#308080; ">&gt;</span>ось за цим посиланням&lt;/<span style="color:#200080; font-weight:bold; ">a</span><span style="color:#308080; ">&gt;</span><span style="color:#308080; ">.</span>&lt;/<span style="color:#200080; font-weight:bold; ">p</span><span style="color:#308080; ">&gt;</span></span></pre>
+        <h3>Зображення:</h3>
+        <img src="images_lab2/Снимок экрана 2024-10-14 195853.png" alt="image1">
+        <p>Переваги:</p>
+        <ul>
+            <li>Легкість у використанні для окремих елементів.</li>
+            <li>Не потребує окремих файлів стилів.</li>
+        </ul>
+        <p>Недоліки:</p>
+        <ul>
+            <li>Погано підходить для великих проєктів.</li>
+            <li>Важко підтримувати та змінювати стилі в майбутньому.</li>
+            <li>Може призвести до дублювання стилів.</li>
+        </ul>
+
+        <h2>2. Internal-стилі (Внутрішні стилі)</h2>
+        <p>Стилі визначаються всередині HTML-документа в секції &lt;head&gt; за допомогою тегу &lt;style&gt;. Цей підхід
+            використовується, коли стилі потрібні лише для одного HTML-документа.</p>
+        <h3>Приклад:</h3>
+        <pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="uk"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;Приклад&lt;/title&gt;
+            &lt;style&gt;
+                p {
+                        color: blue;
+                        font-size: 18px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;Цей текст синій і має розмір 18px.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </code></pre>
+        <div class="class1">
+            <p>Цей текст синій і має розмір 18px.</p>
+        </div>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax">
+        &lt;h2 class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>statistics-title</span><span style='color:#2a00ff; '>"</span>>Статистика нерухомості&lt;/h2>
+.statistics-title
+{
+font-size: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>24px</span>;
+font-weight: bold;
+margin-bottom: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>20px</span>;
+color: black;
+}</pre>
+        <h3>Зображення:</h3>
+        <img src="images_lab2/Снимок экрана 2024-10-14 200605.png" alt="image2" style="width:100%;">
+        <p>Переваги:</p>
+        <ul>
+            <li>Стилі знаходяться в одному місці разом з HTML-кодом.</li>
+            <li>Можна застосовувати стилі до кількох елементів на сторінці.</li>
+        </ul>
+        <p>Недоліки:</p>
+        <ul>
+            <li>Стилі застосовуються лише до одного документа.</li>
+            <li>Зростає розмір HTML-документа, що може вплинути на час завантаження сторінки.</li>
+        </ul>
+        <h2>3. External-стилі (Зовнішні стилі)</h2>
+        <p>Цей метод передбачає підключення зовнішнього CSS-файлу до HTML-документа за допомогою тегу &lt;link&gt;, який
+            розміщується в секції &lt;head&gt;. Зовнішні стилі підходять для великих проєктів, де один файл стилів
+            використовується для кількох сторінок.</p>
+
+        <h3>Приклад:</h3>
+        <p>index.html</p>
+        <pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="uk"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;Приклад&lt;/title&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;Цей текст буде стилізований за допомогою зовнішнього CSS.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>
+        <p>style.css</p>
+        <pre><code>
+        p {
+            color: green;
+            font-size: 20px;
+        }
+        </code></pre>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax">
+        &lt;head>
+&lt;meta charset=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>UTF-8</span><span style='color:#2a00ff; '>"</span>>
+&lt;meta name=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>viewport</span><span style='color:#2a00ff; '>"</span> content=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>width=device-width, initial-scale=1.0</span><span style='color:#2a00ff; '>"</span>>
+&lt;<span style='color:#7f0055; font-weight:bold; '>link</span> rel=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>icon</span><span style='color:#2a00ff; '>"</span> href=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/icon-estate_agency.png</span><span style='color:#2a00ff; '>"</span> type=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>image/png</span><span style='color:#2a00ff; '>"</span>>
+&lt;<span style='color:#7f0055; font-weight:bold; '>link</span> rel=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>stylesheet</span><span style='color:#2a00ff; '>"</span> href=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>style.css</span><span style='color:#2a00ff; '>"</span>>
+&lt;title>FLATSFY&lt;/title>
+&lt;/head></pre>
+        <h3>Зображення:</h3>
+        <img src="images_lab2/Снимок экрана 2024-10-14 200819.png" alt="image4" style="width:100%;">
+        <p>Переваги:</p>
+        <ul>
+            <li>Легко підтримувати і оновлювати стилі.</li>
+            <li>Один файл CSS можна використовувати для багатьох сторінок.</li>
+            <li>Менший розмір HTML-документа, що прискорює завантаження сторінки.</li>
+        </ul>
+        <p>Недоліки:</p>
+        <ul>
+            <li>Потрібно окремо завантажувати файл CSS, що може дещо сповільнити перший рендер сторінки.</li>
+        </ul>
+        <h2>4. Підключення CSS через @import</h2>
+        <p>Стилі можна підключати до CSS-файлу або HTML-документа за допомогою директиви @import. Вона дозволяє
+            імпортувати інші CSS-файли всередині CSS-файлу або в &lt;style&gt;
+            -блоці в HTML.</p>
+        <h3>Приклад:</h3>
+        <pre><code>
+        @import url('styles.css');
+        @import url('another-styles.css');
+
+        body {
+            font-family: Arial, sans-serif;
+            }
+        </code></pre>
+        <p>Переваги:</p>
+        <ul>
+            <li>Можливість розбивати стилі на кілька файлів для кращої організації.</li>
+        </ul>
+        <p>Недоліки:</p>
+        <ul>
+            <li>Завантаження сторінки може бути повільнішим, оскільки імпортовані файли завантажуються пізніше основного
+                файлу CSS.</li>
+        </ul>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

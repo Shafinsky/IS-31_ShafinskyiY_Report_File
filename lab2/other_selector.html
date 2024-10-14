@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Інші селектори</h1>
+    </header>
+    <main>
+        <h2> Сусідній селектор</h2>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax">
+        &lt;<span style='color:#7f0055; font-weight:bold; '>div</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>blocks-container</span><span style='color:#2a00ff; '>"</span>>
+&lt;<span style='color:#7f0055; font-weight:bold; '>div</span> onclick=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>window.open('https:/lun.ua/v2/go?placement=developer_page&amp;company_id=409&amp;event_category=view_developer')</span><span style='color:#2a00ff; '>"</span>>
+&lt;<span style='color:#7f0055; font-weight:bold; '>div</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>info-block color-1</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>https://img.lunstatic.net/company-premium/1358.svg</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Sample Image</span><span style='color:#2a00ff; '>"</span>>
+&lt;p>Креатор-Буд&lt;/p>
+&lt;p>&lt;span>2 будинки здано&lt;/span>&lt;/p>
+&lt;p>&lt;span>9 будинків в процесі&lt;/span>&lt;/p>
+&lt;/<span style='color:#7f0055; font-weight:bold; '>div</span>>
+&lt;/<span style='color:#7f0055; font-weight:bold; '>div</span>>
+.blocks-container
+{
+display: flex;
+flex-wrap: wrap;
+gap: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>20px</span>;
+justify-content: center;
+}
+.info-block
+{
+flex-grow: 1;
+<span style='color:#7f0055; font-weight:bold; '>min</span>-width: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>200px</span>;
+background-color: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>#f9f9f9</span>;
+padding: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>10px</span>;
+border-radius: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>8px</span>;
+box-shadow: 0 <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>2px</span> <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>5px</span> rgba(0, 0, 0, 0.1);
+text-align: center;
+display: flex;
+flex-direction: column;
+cursor: pointer;
+}
+.info-block img
+{
+width: 100%;
+height: 100%;
+border-radius: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>8px</span>;
+object-fit: cover;
+margin-bottom: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>5px</span>;
+}
+.info-block p
+{
+margin: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>3px</span> 0;
+color: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>#333</span>;
+font-size: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>12px</span>;
+line-height: 1.2;
+}
+.info-block.color-1 { background-color: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>#eb1212</span>; }</pre>
+        <h3>Зображення:</h3>
+        <img src="images_lab2/Снимок экрана 2024-10-14 202628.png" alt="sys_selector" style="width:100%;">
+        <h3>Теорія:</h3>
+        <p>Сусідні селектори в CSS — це інструменти, які дозволяють стилізувати елементи на основі їхнього сусідства в
+            документі. Вони застосовуються для вибору елемента, який йде безпосередньо після іншого елемента, тобто є
+            його сусідом. Цей тип селектора особливо корисний, коли потрібно змінити стиль елемента в залежності від
+            того, що передує йому у структурі HTML.</p>
+        <p>Сусідні селектори дозволяють уникнути використання додаткових класів для стилізації, зменшуючи обсяг коду та
+            покращуючи його читабельність. Важливо, що селектор працює лише з тим елементом, який безпосередньо йде
+            після цільового, тому, якщо між ними є інші елементи, сусідній селектор не спрацює.</p>
+        <p>Cинтаксис:</p>
+        <pre><code>
+            selector1 + selector2 {
+            /* стилі для selector2 */
+            }
+        </code></pre>
+        <h2> Cелектор атрибута</h2>
+        <h3>Теорія:</h3>
+        <p>Селектори атрибутів у CSS дозволяють вибирати елементи HTML на основі значень їх атрибутів. Основний
+            синтаксис селектора атрибута виглядає як [атрибут], що означає, що він вибирає всі елементи, які мають
+            зазначений атрибут, незалежно від його значення. Наприклад, селектор [disabled] вибирає всі елементи з
+            атрибутом disabled.</p>
+        <p>Якщо ви хочете вибрати елементи з певним значенням атрибута, ви можете використати синтаксис
+            [атрибут="значення"]. Це дозволяє вибрати тільки ті елементи, у яких атрибут має вказане значення.
+            Наприклад, [type="text"] вибирає всі текстові поля вводу.</p>
+        <p>Існують також селектори, які дозволяють здійснювати часткові збіги. Селектор [атрибут^="значення"] вибирає
+            елементи, атрибут яких починається з вказаного значення. Наприклад, [href^="http"] вибирає всі посилання,
+            які починаються з http. Селектор [атрибут$="значення"] вибирає елементи, атрибут яких закінчується на
+            вказане значення, наприклад, [src$=".jpg"] вибирає всі зображення з розширенням .jpg. А селектор
+            [атрибут*="значення"] вибирає елементи, атрибут яких містить вказане значення де-небудь у середині, як у
+            випадку [class*="button"], що вибирає всі елементи, у класі яких є слово button.</p>
+        <p>Селектори атрибутів також можуть комбінуватися з іншими селекторами для більш точного вибору елементів.
+            Наприклад, div[data-role="main"] вибирає всі
+        <p>, у яких атрибут data-role має значення main. Завдяки цим селекторам ви можете стилізувати HTML, не додаючи
+            додаткових класів або ідентифікаторів, що робить ваш код чистішим і легшим для підтримки.</p>
+
+        <h2> Дочірній селектор</h2>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax">
+        &lt;<span style='color:#7f0055; font-weight:bold; '>div</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>photo-gallery</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/apartament1.webp</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Фото квартири</span><span style='color:#2a00ff; '>"</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>gallery-image</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/apartament2.webp</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Фото квартири</span><span style='color:#2a00ff; '>"</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>gallery-image</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/apartament3.webp</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Фото квартири</span><span style='color:#2a00ff; '>"</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>gallery-image</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/apartament4.webp</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Фото квартири</span><span style='color:#2a00ff; '>"</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>gallery-image</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/apartament5.webp</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Фото квартири</span><span style='color:#2a00ff; '>"</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>gallery-image</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/apartament6.webp</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Фото квартири</span><span style='color:#2a00ff; '>"</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>gallery-image</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/apartament7.webp</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Фото квартири</span><span style='color:#2a00ff; '>"</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>gallery-image</span><span style='color:#2a00ff; '>"</span>>
+&lt;img src=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Pictures/apartament8.webp</span><span style='color:#2a00ff; '>"</span> alt=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Фото квартири</span><span style='color:#2a00ff; '>"</span> class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>gallery-image</span><span style='color:#2a00ff; '>"</span>>
+&lt;button class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>prev-photo</span><span style='color:#2a00ff; '>"</span>>⟨&lt;/button>
+&lt;button class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>next-photo</span><span style='color:#2a00ff; '>"</span>>⟩&lt;/button>
+&lt;/<span style='color:#7f0055; font-weight:bold; '>div</span>>
+.photo-gallery
+{
+position: relative;
+width: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>550px</span>;
+height: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>450px</span>;
+overflow: hidden;
+border-radius: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>8px</span>;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+</pre>
+        <h3>Зображення:</h3>
+        <img src="images_lab2/Снимок экрана 2024-10-14 203029.png" alt="dau_selector" style="width:100%;">
+        <p>Це означає, що стиль був застосований до всіх зображень (img), які є безпосередніми дітьми елемента з класом
+            .item, який, в свою чергу, є безпосереднім нащадком .carousel-inner.</p>
+
+        <h3>Теорія:</h3>
+        <p>Дочірні селектори в CSS використовуються для вибору елементів, які є безпосередніми нащадками (дочірніми)
+            певного батьківського елемента. Це дозволяє стилізувати конкретні елементи в структурі HTML, зберігаючи при
+            цьому контроль над тим, які саме елементи отримують ці стилі.</p>
+        <p>Синтаксис дочірніх селекторів виглядає наступним чином:</p>
+        <pre><code>
+                parent > child {
+                /* стилі для child */
+                }
+            </code></pre>
+
+        <h2> Універсальний селектор</h2>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax">
+        &lt;p class=<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>highlights truncated</span><span style='color:#2a00ff; '>"</span>>Трикімнатна квартира, гардероб, балкон Сумісний санузол Опалення,світло ,вода - по лічильникам На балконі є 2 морозильні камери Можливе заселення з дітками , або тваринками Камін газовий, діючий,але більше для чудового декору,аніж для обігріву Квартира чудова ,сімейна та затишна Перевага- довгостровий термін та адекватна ціна У квартирі виконаний клінінг&lt;/p>
+        .highlights {
+        color: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>#555555</span>;
+        font-size: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1em</span>;
+        font-family: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>'Lucida Sans'</span>, <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>'Lucida Sans Regular'</span>, <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>'Lucida Grande'</span>, <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>'Lucida Sans Unicode'</span>, Geneva, Verdana, sans-serif;
+        }</pre>
+        <h3>Зображення:</h3>
+        <img src="images_lab2/Снимок экрана 2024-10-14 203423.png" alt="un_selector" style="width:100%;">
+        <h3>Теорія:</h3>
+        <p>Універсальний селектор у CSS використовується для вибору всіх елементів на сторінці без винятку. Він
+            представлений символом зірочки (*). Основний синтаксис виглядає так: * { властивість: значення; }.
+            Використання універсального селектора дозволяє застосовувати певні стилі до всіх елементів, що може бути
+            корисно для глобального форматування, наприклад, для задання шрифтів, кольорів чи відступів.</p>
+        <p>Однак варто пам’ятати, що зловживання універсальним селектором може призвести до зниження продуктивності,
+            оскільки браузеру доводиться перевіряти всі елементи на сторінці. Це особливо важливо на великих
+            веб-сторінках або в додатках з великою кількістю елементів. Універсальний селектор може також
+            використовуватися в комбінації з іншими селекторами, щоб звузити область застосування стилів, наприклад, div
+            * { властивість: значення; }, що вибирає всі елементи всередині &lt;div>.</p>
+        <p>Цей селектор часто використовують для скидання стилів за замовчуванням у браузері, забезпечуючи єдність
+            вигляду елементів на всіх платформах. Проте, рекомендується використовувати універсальний селектор з
+            обережністю, щоб уникнути непередбачених наслідків у стилізації вашого веб-дизайну.</p>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

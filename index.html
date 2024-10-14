@@ -118,7 +118,7 @@
         .sidebar div:hover 
         {
             background-color: #65dabc;
-            color: white;
+            color: rgb(3, 3, 3);
             transform: translateY(-2px);
         }
     
@@ -131,7 +131,7 @@
         .main-content 
         {
             float: left;
-            width: 70%;
+            width: 60%;
             padding-left: 20px;
             height: 600px;
         }
@@ -187,14 +187,48 @@
             </div>
 
             <div class="sidebar" id="sidebar">
-                <div onclick="showFile('description.html')">Опис предметного середовища</div>
-                <div onclick="showFile('topic.html')">Тема, Мета, Місце розташування</div>
-                <div onclick="showFile('structure.html')">СТРУКТУРА ДОКУМЕНТА</div>
-                <div onclick="showFile('html_tables.html')">HTML-код ТАБЛИЦЬ</div>
-                <div onclick="showFile('html_forms_and_lists.html')">HTML-код ФОРМИ</div>
-                <div onclick="showFile('html_images.html')">HTML-код ЗОБРАЖЕННЯ</div>
-                <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+                <div id="lab1" class="lab-buttons">
+                    <div onclick="showFile('description.html')">Опис предметного середовища</div>
+                    <div onclick="showFile('topic.html')">Тема, Мета, Місце розташування</div>
+                    <div onclick="showFile('structure.html')">СТРУКТУРА ДОКУМЕНТА</div>
+                    <div onclick="showFile('html_tables.html')">HTML-код ТАБЛИЦЬ</div>
+                    <div onclick="showFile('html_forms_and_lists.html')">HTML-код ФОРМИ та СПИСКІВ</div>
+                    <div onclick="showFile('html_images.html')">HTML-код ЗОБРАЖЕННЯ</div>
+                    <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+                </div>
+                <div id="lab2" class="lab-buttons">
+                    <div onclick="showFile('topic.html')">Тема, метa ЛР №2. Місце розташування сайту, звіту</div>
+                    <div onclick="showFile('sposib_style.html')">Способи підключення стилів</div>
+                    <div onclick="showFile('seleсtor.html')">СЕЛЕКТОРИ</div>
+                    <div onclick="showFile('tipe_seleсtor.html')">Cелектори тегу</div>
+                    <div onclick="showFile('class_seleсtor.html')">Селектори класу</div>
+                    <div onclick="showFile('id_selector.html')">Селектори ідентифікаторів</div>
+                    <div onclick="showFile('other_selector.html')">Інші селектори</div>
+                    <div onclick="showFile('css_text_style.html')">CSS: Шрифти, текст, таблиці, фон, контур, списки. CSS просунутий </div>
+                    <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+                </div>
+                <div id="lab3" class="lab-buttons">
+                    <div onclick="showFile('topic.html')">Тема, метa ЛР №3. Місце розташування сайту, звіту</div>
+                    <div onclick="showFile('task_1.html')">Завдання №1. Зовнішній вигляд макету. Код макету.</div>
+                    <div onclick="showFile('task_2.html')">Завдання №2</div>
+                    <div onclick="showFile('fix_table.html')">Фіксована таблична верстка</div>
+                    <div onclick="showFile('adapt_table.html')">Гумова таблична верстка</div>
+                    <div onclick="showFile('fix_block.html')">Фіксована блокова верстка</div>
+                    <div onclick="showFile('adapt_block.html')">Гумова блокова верстка</div>
+                    <div onclick="showFile('task_3.html')">Завдання №3. Flexbox</div>
+                    <div onclick="showFile('screen_page_flex.html')">Скріншот сторінки (Flexbox)</div>
+                    <div onclick="showFile('html_flexbox.html')">HTML - код (Flexbox)</div>
+                    <div onclick="showFile('css_flexbox.html')">CSS - код (Flexbox)</div>
+                    <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+                </div>
+                <div id="lab4" class="lab-buttons">
+                    <div onclick="showFile('topic.html')">Тема, метa ЛР №4. Місце розташування сайту, звіту</div>
+                    <div onclick="showFile('adapt_site.html')">Адаптивна верстка сайту</div>
+                    <div onclick="showFile('media.html')">Медіа-запити(з використанням логічних операторів)</div>
+                    <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+                </div>
             </div>
+        </div>
 
             <div class="main-content" id="output">
                 <iframe id="labFrame" src="" frameborder="0"></iframe>
@@ -217,10 +251,17 @@
                 buttonElement.classList.add('active');
                 activeButton = buttonElement;
 
-                const sidebarButtons = document.querySelectorAll('.sidebar div');
-                sidebarButtons.forEach(button => {
-                    button.classList.remove('disabled');
+                const sidebar = document.getElementById('sidebar');
+                sidebar.style.display = 'block';
+
+                document.querySelectorAll('.lab-buttons').forEach(buttonSet => {
+                    buttonSet.style.display = 'none';
                 });
+
+                const labButtons = document.getElementById(`lab${labNumber}`);
+                if (labButtons) {
+                    labButtons.style.display = 'block';
+                }
             }
             function showFile(fileName) {
                 if (currentLab) {
@@ -230,10 +271,6 @@
             }
             document.addEventListener('DOMContentLoaded', () => {
                 currentLab = '';
-                const sidebarButtons = document.querySelectorAll('.sidebar div');
-                sidebarButtons.forEach(button => {
-                    button.classList.add('disabled');
-                });
             });
         </script>
 
