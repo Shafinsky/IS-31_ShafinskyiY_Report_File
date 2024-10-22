@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1>Медіа-запити</h1>
+        <p>Для реалізації адаптивного дизайну сайту було використано медіа-запити, які дозволяють змінювати стилі в
+            залежності від ширини екрану. Були визначені відповідні брейкпоінти, що забезпечують оптимальне розміщення
+            елементів на сторінці для різних типів пристроїв.</p>
+        <h2>Мобільна версія сайту</h2>
+        <p>Цей медіа-запит застосовується для екранів з шириною 600px або менше. У цьому випадку, стилі включають:</p>
+        <ul>
+            <li>Відображення навігаційного меню у вертикальному вигляді(з використанням кнопки)</li>
+            <li>Блокове вертикальне розташування елементів таблиці, що полегшує їх сприйняття на малих екранах.</li>
+            <li>Адаптація футера і контактної інформації для зручності користувача.</li>
+        </ul>
+        <p>Код:</p>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+            @media (<span style='color:#7f0055; font-weight:bold; '>max</span>-width: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>600px</span>) {
+                .container {
+                flex-direction: column;
+                justify-content: flex-start;
+                }
+                nav.custom_navigation ul {
+                display: none;
+                }
+                .toggle-button {
+                display: block;
+                }
+                .news-grid {
+                grid-template-columns: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1fr</span>;
+                }
+                .statistics-grid {
+                grid-template-columns: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1fr</span>;
+                }
+                .rental-object {
+                flex-direction: column;
+                }
+                .photo-gallery {
+                height: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>150px</span>;
+                }
+                .info-block {
+                <span style='color:#7f0055; font-weight:bold; '>min</span>-width: 100%;
+                }
+                }</pre>
+        <h2>Планшетна/ноутбучна версія сайту</h2>
+        <p>Цей медіа-запит застосовується для екранів з шириною від 600px до 1560px. Оператор and дозволяє поєднувати
+            кілька умов у медіа-запиті. У запиті @media (min-width: 600px) and (max-width: 1560px) стилі будуть
+            застосовуватися лише на пристроях, ширина яких знаходиться в межах від 600px до 1560px. Стилі включають:</p>
+        <ul>
+            <li>Навігаційне меню відображається горизонтально, зручно для перегляду. Залежно від екрану (планшет або
+                ноутбук) буде відображетися у 2 або 1 рядок.</li>
+            <li>Елементи таблиць отримують нові стилі, що покращують їх зовнішній вигляд.</li>
+            <li>Футер має більш ширше розташування, забезпечуючи доступ до важливих елементів.</li>
+        </ul>
+        <p>Код:</p>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+            @media (<span style='color:#7f0055; font-weight:bold; '>min</span>-width: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>600px</span>) and (<span style='color:#7f0055; font-weight:bold; '>max</span>-width: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1200px</span>) {
+                .container {
+                flex-direction: column;
+                justify-content: center;
+                }
+                .news-grid {
+                grid-template-columns: repeat(2, <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1fr</span>);
+                }
+                .statistics-grid {
+                grid-template-columns: repeat(2, <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1fr</span>);
+                }
+                .rental-object {
+                flex-direction: column;
+                }
+                .photo-gallery {
+                height: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>200px</span>;
+                }
+                }</pre>
+        <h2>Десктопна версія сайту</h2>
+        <p>Цей медіа-запит активується для екранів шириною понад 1560px. Логічний оператор not screen виключає
+            застосування стилів для звичайних екранів(екранів шириною 1560px або менше).Основні зміни включають: </p>
+        <ul>
+            <li>Центрування навігаційного меню.</li>
+            <li>Створення чітких контурів таблиць з акцентом на заголовки.</li>
+            <li>Футер розміщує елементи по краях, а не в центрі, що підвищує зручність використання.</li>
+        </ul>
+        <p>Код:</p>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+            @media (<span style='color:#7f0055; font-weight:bold; '>min</span>-width: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1200px</span>) {
+                .container {
+                <span style='color:#7f0055; font-weight:bold; '>max</span>-width: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1500px</span>;
+                justify-content: space-between;
+                }
+                .news-grid {
+                grid-template-columns: repeat(3, <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1fr</span>);
+                }
+                .statistics-grid {
+                grid-template-columns: repeat(4, <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>1fr</span>);
+                }
+                .info-block {
+                <span style='color:#7f0055; font-weight:bold; '>min</span>-width: <span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>300px</span>;
+                }
+                .rental-object {
+                flex-direction: row;
+                }
+                }</pre>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
