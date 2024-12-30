@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Завдання №7</h1>
+
+        <div class="blockTask">
+            <h2>ЗАВДАННЯ 7</h2>
+            <ul id="categories">
+                <li class="item">
+                    <h2>Animals</h2>
+                    <ul>
+                        <li>Cat</li>
+                        <li>Hamster</li>
+                        <li>Horse</li>
+                        <li>Parrot</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <h2>Products</h2>
+                    <ul>
+                        <li>Bread</li>
+                        <li>Prasley</li>
+                        <li>Cheese</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </li>
+            </ul>
+            <button id="executeBtn">Виконати</button>
+        </div>
+        <h1>Програмний код</h1>
+        <h3>task7.js</h3>
+        <img src="./laba7_images/task7_code_js.png" alt="task7_code_js" style="width: 70%;">
+        <h3>task7.html</h3>
+        <pre class="code_syntax" style="color:#000000;background:#ffffff;"><span class="line_wrapper"><span style="color:#0000ff; ">&lt;!DOCTYPE html&gt;</span></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">html</span><span style="color:#008000; "> </span><span style="color:#008000; ">lang</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"en"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">head</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">meta</span><span style="color:#008000; "> </span><span style="color:#008000; ">charset</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"UTF-8"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">meta</span><span style="color:#008000; "> </span><span style="color:#008000; ">name</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"viewport"</span><span style="color:#008000; "> </span><span style="color:#008000; ">content</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"width=device-width, initial-scale=1.0"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">title</span><span style="color:#c0c0c0; ">&gt;</span>Document<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">title</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">link</span><span style="color:#008000; "> </span><span style="color:#008000; ">rel</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"stylesheet"</span><span style="color:#008000; "> </span><span style="color:#008000; ">href</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"./style.css"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">head</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">body</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">header</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">header</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#808080; ">main</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#008000; ">&lt;!-- Для більш чіткого відображення коду у звіті було використано можливості сайту </span><span style="color:#0000ff; ">https://tohtml.com/cpp</span><span style="color:#008000; "> (автор інструменту: Олег Паращенко)""--&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h1</span><span style="color:#c0c0c0; ">&gt;</span>Завдання №<span style="color:#800080; ">7</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h1</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">div</span><span style="color:#008000; "> </span><span style="color:#008000; ">class</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"blockTask"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">            <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span>ЗАВДАННЯ <span style="color:#800080; ">7</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">            <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">ul</span><span style="color:#008000; "> </span><span style="color:#008000; ">id</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"categories"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#008000; "> </span><span style="color:#008000; ">class</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"item"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span>Animals<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">ul</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>Cat<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>Hamster<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>Horse<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>Parrot<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">ul</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#008000; "> </span><span style="color:#008000; ">class</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"item"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span>Products<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">ul</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>Bread<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>Prasley<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>Cheese<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">ul</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#008000; "> </span><span style="color:#008000; ">class</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"item"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span>Technologies<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">ul</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>HTML<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>CSS<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>JavaScript<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>React<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span>Node<span style="color:#800080; ">.</span>js<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                    <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">ul</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">                <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">li</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">            <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">ul</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">            <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">button</span><span style="color:#008000; "> </span><span style="color:#008000; ">id</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"executeBtn"</span><span style="color:#c0c0c0; ">&gt;</span>Виконати<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">button</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">div</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h1</span><span style="color:#c0c0c0; ">&gt;</span>Програмний код<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h1</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h3</span><span style="color:#c0c0c0; ">&gt;</span>task7<span style="color:#800080; ">.</span>js<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h3</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">img</span><span style="color:#008000; "> </span><span style="color:#008000; ">src</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"./laba7_images/task7_code_js.png"</span><span style="color:#008000; "> </span><span style="color:#008000; ">alt</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"task7_code_js"</span><span style="color:#008000; "> </span><span style="color:#008000; ">style</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"</span><span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span><span style="color:#008000; "> </span><span style="color:#800080; ">70</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span><span style="color:#800000; ">"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h3</span><span style="color:#c0c0c0; ">&gt;</span>task7<span style="color:#800080; ">.</span>html<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h3</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h1</span><span style="color:#c0c0c0; ">&gt;</span>Результат виконання<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h1</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">img</span><span style="color:#008000; "> </span><span style="color:#008000; ">src</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"./laba7_images/task7_result_1.png"</span><span style="color:#008000; "> </span><span style="color:#008000; ">alt</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"task7_result_1"</span><span style="color:#008000; "> </span><span style="color:#008000; ">style</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"</span><span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span><span style="color:#008000; "> </span><span style="color:#800080; ">40</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span><span style="color:#800000; ">"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    </span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#808080; ">main</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">footer</span><span style="color:#c0c0c0; ">&gt;</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">footer</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">script</span><span style="color:#008000; "> </span><span style="color:#008000; ">src</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"./tasks_js/task7.js"</span><span style="color:#c0c0c0; ">&gt;</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">script</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">body</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">html</span><span style="color:#c0c0c0; ">&gt;</span></span></pre>
+        <h1>Результат виконання</h1>
+        <img src="./laba7_images/task7_result_1.png" alt="task7_result_1" style="width: 40%;">
+    
+    </main>
+    <footer></footer>
+    <script src="./tasks_js/task7.js"></script>
+</body>
+
+</html>

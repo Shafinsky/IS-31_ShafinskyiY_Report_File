@@ -1,0 +1,14 @@
+.blockTask{
+    background-color: rgb(130, 195, 132);
+    padding: 15px;
+    display: inline-block; 
+}
+
+#square{
+    display: block;
+    border: 2px dashed red;
+}
+
+.widget{
+    border: 4px dotted rgb(29, 0, 102);
+}
